@@ -1,11 +1,9 @@
-# About
+# (Deterministic) Finite Automaton in Javascript.
 
-(Deterministic) Finite Automaton implementation in Javascript.
+[Formal Definition](https://en.wikipedia.org/wiki/Deterministic_finite_automaton#Formal_definition)
 
-[DFA Formal Definition](https://en.wikipedia.org/wiki/Deterministic_finite_automaton#Formal_definition)
-
-States and symbols are represented by strings.
-Transitions are objects of interface { state, symbol, resultState }.
+States and symbols are represented by strings.  
+Transitions are objects of interface { state, symbol, resultState }.  
 Each state needs a transition for each input symbol. (completeness)
 
 # Requirements
