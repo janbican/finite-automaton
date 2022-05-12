@@ -94,32 +94,3 @@ class TransitionFunction {
     return transitions
   }
 }
-
-
-// accepts binary strings that contains an even number of 0s
-const automaton = new FiniteAutomaton({
-  transitions: [
-    { state: 'q0', symbol: '0', resultState: 'q1' },
-    { state: 'q0', symbol: '1', resultState: 'q0' },
-    { state: 'q1', symbol: '0', resultState: 'q0' },
-    { state: 'q1', symbol: '1', resultState: 'q1' },
-  ],
-  startState: 'q0',
-  acceptStates: ['q0']
-})
-
-console.log('states:', automaton.states())
-console.log('alphabet:', automaton.alphabet())
-console.log('transitions:', automaton.transitions())
-console.log('startState: ', automaton.startState())
-console.log('acceptStates: ', automaton.acceptStates())
-
-console.log('accepts: \'\'', automaton.isAccepting(''))
-console.log('accepts: 0', automaton.isAccepting('0'))
-console.log('accepts: 00', automaton.isAccepting('00'))
-console.log('accepts: 10', automaton.isAccepting('10'))
-console.log('accepts: 101', automaton.isAccepting('101'))
-console.log('accepts: 001', automaton.isAccepting('001'))
-console.log('accepts: 000', automaton.isAccepting('000'))
-console.log('accepts: 110001011', automaton.isAccepting('110001011'))
-
